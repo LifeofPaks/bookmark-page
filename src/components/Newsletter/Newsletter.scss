@@ -1,86 +1,121 @@
 @import "../../styles/Responsive.scss";
 @import "../../styles/Variables.scss";
 
-.newsletter{
-    text-align: center;
-    background: $Soft-Blue;
-    padding-block: 5%;
+.newsletter {
+  text-align: center;
+  background: $Soft-Blue;
+  padding-block: 5%;
+
+  @include Mobile {
+    margin-top: 30%;
+    padding-inline: 2rem;
+  }
+
+  .container {
+    width: 450px;
+    margin-inline: auto;
+    color: #fff;
 
     @include Mobile {
-        margin-top: 30%;
-        padding-inline: 2rem;
+      width: 100%;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 13px;
+
+      @include Mobile {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+
+      @include Mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      @include Mobile {
+        flex-direction: column;
+        margin-bottom: 2rem;
       }
 
-    .container{
-        width: 450px;
-        margin-inline: auto;
-        color: #fff;
+      .inputWrapper {
+        width: 300px;
+        position: relative;
+
+        &.error{
+            background: $Soft-Red;
+            padding: .1rem;
+            border-radius: 5px;
+
+            p{
+                display: block;
+            }
+
+            img{
+                display: block;
+            }
+        }
 
         @include Mobile {
             width: 100%;
           }
-    
 
-        span{
-            display: block;
-            margin-bottom: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            font-size: 13px;
+        input {
+          width: 100%;
+          background: #fff;
+          padding: 1rem 1.5rem;
+          border-radius: 3px;
+
+          &::placeholder {
+            opacity: 0.5;
+          }
+        }
+
+        p{
+            text-align: left;
+            font-size: 11px;
+            padding-left: 10px;
+            padding-block: .3rem;
+            color: #fff;
+            font-style: italic;
+            display: none;
 
             @include Mobile {
-                margin-top: 4rem;
-                margin-bottom: 1rem;
+                font-size: 10px;
               }
-        
         }
 
-        h2{
-            font-size: 2rem;
-            margin-bottom: 3rem;
-
-            @include Mobile {
-                font-size: 1.5rem;
-              }
-        
+        img{
+            position: absolute;
+            top: 0;
+            right: .5rem;
+            top: 1rem;
+            display: none;
         }
+      }
 
-        form{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
+      button {
+        width: 125px;
 
-            @include Mobile {
-                flex-direction: column;
-                margin-bottom: 2rem;
-            }
-
-        
-
-            input{
-                width:300px;
-                background: #fff;
-                padding: 1rem 1.5rem;
-                border-radius: 5px;
-
-                @include Mobile {
-                    width: 100%;
-                }
-
-                &::placeholder{
-                    opacity: .5;
-                }
-            }
-
-            button{
-                width: 125px;
-
-                @include Mobile {
-                    width: 100%;
-                }
-                
-            }
+        @include Mobile {
+          width: 100%;
         }
+      }
     }
+  }
 }
