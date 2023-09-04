@@ -1,0 +1,77 @@
+@import "../../styles/Responsive.scss";
+@import "../../styles/Variables.scss";
+
+.wrapper{
+    width: 550px;
+    margin-inline: auto;
+    border-top: .5px solid #ccc;
+
+    @include Mobile {
+        width: 100%;
+        text-align: left;
+      }
+    
+
+    .content{
+        padding-block: 1.5rem;
+        border-bottom: .5px solid #ccc;
+        cursor: pointer;
+        transition: .3s;
+
+
+        .question{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3{
+                font-weight: 400;
+                font-size: 18px;
+                color: $Very-Dark-Blue;
+
+                @include Mobile {
+                    font-size: 15px;
+                  }
+            }
+
+            img{
+                transition: .3s;
+
+                @include Mobile {
+                    width: 16px;
+                  }
+            }
+        }
+
+        p{
+            text-align: left;
+            font-size: 14px;
+            height: 0;
+            opacity: 0;
+            transition: .3s;
+            overflow: hidden;
+            line-height: 25px;
+        }
+
+        &.show{
+
+            .question{
+
+                img{
+                    transform: rotate(180deg);
+                    
+                }
+
+            }
+            
+            p{
+                height: unset;
+                padding-top: 1rem;
+                opacity: 1;
+            }
+        }
+      
+    }
+
+   
+}

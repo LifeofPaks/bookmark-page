@@ -1,6 +1,6 @@
 @import "../../styles/Responsive.scss";
 @import "../../styles/Variables.scss";
-@import 'animate.css';
+
 
 .home {
   nav {
@@ -9,6 +9,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include Mobile{
+      padding-inline: 2rem;
+    }
 
     .left {
       img {
@@ -20,6 +24,10 @@
       display: flex;
       align-items: center;
       gap: 2rem;
+
+      @include Mobile{
+        display: none;
+      }
 
       li {
         text-transform: uppercase;
@@ -47,6 +55,15 @@
         }
       }
     }
+
+    .hamburger{
+      display: none;
+
+      @include Mobile{
+        display: block;
+      }
+    }
+
   }
 
   .hero {
@@ -56,13 +73,30 @@
     justify-content: space-between;
     padding-left: 13%;
 
+    @include Mobile{
+      flex-direction: column-reverse;
+      padding-left: 0;
+    }
+
     .left {
+
+      @include Mobile{
+        width: 100%;
+        text-align: center;
+        margin-top: 3rem;
+        padding-inline: 2rem;
+      }
+
       h1 {
         font-size: 3rem;
         margin-bottom: 2rem;
         color: $Very-Dark-Blue;
         animation: fadeIn 2s 1s forwards;
         opacity: 0;
+
+        @include Mobile{
+          font-size: 2rem;
+        }
       }
 
       p {
@@ -72,6 +106,10 @@
         margin-bottom: 2rem;
         animation: fadeInUp 2s 1.1s forwards;
         opacity: 0;
+
+        @include Mobile{
+          width: 100%;
+        }
       }
 
       .btnWrapper {
@@ -80,6 +118,18 @@
         gap: 1rem;
         animation: fadeInUp 2s 1.8s forwards;
         opacity: 0;
+
+        @include Mobile{
+          width: 100%;
+        }
+
+
+        button{
+          @include Mobile{
+            width: 100%;
+            font-size: 0.7rem;
+          }
+        }
 
         .btn {
           color: #585858;
@@ -96,6 +146,7 @@
         .blueBtn{
             transition: .3s;
 
+
             &:hover{
               transform: scale(1.03);
             }
@@ -108,10 +159,18 @@
     overflow-x: hidden;
     position: relative;
 
+    @include Mobile{
+      width: 100%;
+    }
+
     img {
       animation: backInRight 2s 2.2s forwards;
       opacity: 0;
       margin-right: 10rem;
+
+      @include Mobile{
+        width: 100%;
+      }
     }
 
     .bgImage{
@@ -123,6 +182,10 @@
         bottom: 0;
         right: 0;
         z-index: -1;
+
+        @include Mobile{
+          height: 180px;
+        }
     }
   }
 }

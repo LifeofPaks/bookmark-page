@@ -1,0 +1,86 @@
+@import "../../styles/Responsive.scss";
+@import "../../styles/Variables.scss";
+
+.newsletter{
+    text-align: center;
+    background: $Soft-Blue;
+    padding-block: 5%;
+
+    @include Mobile {
+        margin-top: 30%;
+        padding-inline: 2rem;
+      }
+
+    .container{
+        width: 450px;
+        margin-inline: auto;
+        color: #fff;
+
+        @include Mobile {
+            width: 100%;
+          }
+    
+
+        span{
+            display: block;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 13px;
+
+            @include Mobile {
+                margin-top: 4rem;
+                margin-bottom: 1rem;
+              }
+        
+        }
+
+        h2{
+            font-size: 2rem;
+            margin-bottom: 3rem;
+
+            @include Mobile {
+                font-size: 1.5rem;
+              }
+        
+        }
+
+        form{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            @include Mobile {
+                flex-direction: column;
+                margin-bottom: 2rem;
+            }
+
+        
+
+            input{
+                width:300px;
+                background: #fff;
+                padding: 1rem 1.5rem;
+                border-radius: 5px;
+
+                @include Mobile {
+                    width: 100%;
+                }
+
+                &::placeholder{
+                    opacity: .5;
+                }
+            }
+
+            button{
+                width: 125px;
+
+                @include Mobile {
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@import "../../styles/Responsive.scss";
+@import "../../styles/Variables.scss";
+
+.download{
+    margin-bottom: 15%;
+
+    @include Mobile {
+        padding-inline: 2rem;
+      }
+
+    .title{
+        width: 100%;
+        text-align: center;
+
+        h2{
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: $Very-Dark-Blue;
+
+            @include Mobile {
+                font-size: 1.5rem;
+              }
+        }
+
+        p{
+            width: 500px;
+            margin-inline: auto;
+            line-height: 25px;
+
+            @include Mobile {
+                width: 100%;
+              }
+        }
+    }
+
+    .cardContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        @include Mobile {
+            flex-direction: column;
+          }
+
+        .card{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 0 7px 8px 0 #e8e4f5;
+            width: 280px;
+
+            @include Mobile {
+                width: 90%;
+                margin-top: 2rem;
+              }
+
+           
+            img{
+                margin-block: 2rem;
+                transition: .5s;
+            }
+
+            h3{
+                color: $Very-Dark-Blue;
+                margin-bottom: .8rem;
+            }
+
+            p{
+                padding-bottom: 2rem;
+                border-bottom: 4px dotted #ccccccb8;
+                width: 100%;
+                text-align: center;
+                font-size: 14px;
+            }
+
+            button{
+                padding-inline: 2.5rem;
+                margin-block: 1.5rem;
+            }
+
+            &:hover{
+
+                img{
+                    transform: scale(1.05);
+                }
+            }
+
+
+            &.s2{
+                margin-top: 4rem;
+
+                @include Mobile {
+                    margin-top: 0;
+                  }
+            }
+             &.s3{
+                margin-top: 8rem;
+
+                @include Mobile {
+                    margin-top: 0;
+                  }
+            }
+        }
+    }
+}
+
