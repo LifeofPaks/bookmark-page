@@ -108,6 +108,28 @@
           justify-content: space-between;
           margin-bottom: 3rem;
           width: 100%;
+
+          .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+      
+            .imageWrapper {
+              display: grid;
+              place-content: center;
+              width: 25px;
+              height: 25px;
+              background: #fff;
+              border-radius: 50%;
+              img {
+                width: 14px;
+              }
+            }
+      
+            h3 {
+              font-weight: normal;
+            }
+          }
         }
 
         .links{

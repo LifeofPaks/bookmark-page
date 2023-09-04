@@ -1,58 +1,76 @@
-@import '../../styles/Responsive.scss';
-@import '../../styles/Variables.scss';
+@import "../../styles/Responsive.scss";
+@import "../../styles/Variables.scss";
 
-.footer{
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 15%;
+  background: $Very-Dark-Blue;
+  color: #fff;
+  padding-block: 2rem;
+
+  @include Mobile {
+    flex-direction: column;
+  }
+
+  .left {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-inline: 15%;
-    background: $Very-Dark-Blue;
-    color: #fff;
-    padding-block: 2rem;
+    gap: 3rem;
 
     @include Mobile {
+      flex-direction: column;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .imageWrapper {
+        display: grid;
+        place-content: center;
+        width: 25px;
+        height: 25px;
+        background: $Soft-Blue;
+        border-radius: 50%;
+        img {
+          width: 14px;
+        }
+      }
+
+      h3 {
+        font-weight: normal;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      @include Mobile {
         flex-direction: column;
+      }
+
+      li {
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 3px;
+      }
     }
+  }
 
-    .left{
-        display: flex;
-        align-items: center;
-        gap: 3rem;
+  .right {
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
 
-        @include Mobile {
-            flex-direction: column;
-        }
-
-       .logo{
-
-       }
-
-        ul{
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-
-            @include Mobile {
-                flex-direction: column;
-            }
-
-            li{
-                text-transform: uppercase;
-                font-size: 13px;
-                letter-spacing: 3px;
-            }
-        }
+      @include Mobile {
+        margin-top: 2rem;
+      }
     }
-
-    .right{
-        .socials{
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-
-            @include Mobile {
-                margin-top: 2rem;
-            }
-        }
-    }
+  }
 }
