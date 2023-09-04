@@ -7,7 +7,7 @@ const Faq = () => {
  
 
   return (
-    <div className="faq">
+    <section className="faq">
       <div className="title">
         <h2> Frequently Asked Questions</h2>
         <p>
@@ -23,7 +23,7 @@ const Faq = () => {
       </div>
 
       <button className="blueBtn">More Info</button>
-    </div>
+    </section>
   );
 };
 

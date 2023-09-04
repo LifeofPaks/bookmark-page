@@ -90,6 +90,7 @@
       padding-inline: 2rem;
       opacity: 0;
       transition: .5s;
+      bottom: 0;
 
       &.show{
         left: 0;
@@ -151,7 +152,7 @@
         }
 
         button{
-          margin-bottom: 20rem;
+          margin-bottom: 10rem;
           width: 100%;
           padding-block: 1.3rem;
           border: 1.5px solid #fff;
@@ -166,6 +167,7 @@
           display: flex;
           align-items: center;
           gap: 3rem;
+          margin-bottom: 3rem;
         }
       }
 

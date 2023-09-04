@@ -6,7 +6,7 @@ const Question = ({question, answer, arrow}) => {
     const [showAnswer, setShowAnswer] = useState(false)
     
   return (
-    <div className='wrapper'>
+    <section className='wrapper'>
            <div
             className={`content ${showAnswer ? "show" : ""}`}
             onClick={() => setShowAnswer(!showAnswer)}
@@ -18,7 +18,7 @@ const Question = ({question, answer, arrow}) => {
 
             <p >{answer}</p>
           </div>
-    </div>
+    </section>
   )
 }
 

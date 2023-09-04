@@ -7,12 +7,12 @@ import Newsletter from './components/Newsletter/Newsletter';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
         <Home/>
         <Main/>
         <Newsletter/>
         <Footer/>
-    </div>
+    </main>
   );
 }
 

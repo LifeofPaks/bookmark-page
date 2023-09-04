@@ -5,11 +5,11 @@ import Faq from '../../components/Faq/Faq'
 
 const Main = () => {
   return (
-    <main className='main'>
+    <section className='main'>
         <Feature/>
         <Download/>
         <Faq/>
-    </main>
+    </section>
   )
 }
 

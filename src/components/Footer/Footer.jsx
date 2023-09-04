@@ -5,7 +5,7 @@ import Twitter from "../../images/icon-twitter.svg";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <section className="footer">
       <div className="left">
         <div className="logo">
           <div className="imageWrapper">
@@ -29,7 +29,7 @@ const Footer = () => {
           <img src={Twitter} alt="icon" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

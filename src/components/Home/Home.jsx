@@ -15,7 +15,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
+    <section className="home">
       <nav className={showMenu ? "hide" : ""}>
         <div className="left">
           <img src={Logo} alt="logo" />
@@ -84,7 +84,7 @@ const Home = () => {
           <div className="bgImage"></div>
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 

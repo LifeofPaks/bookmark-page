@@ -10,7 +10,7 @@ const Feature = () => {
   const links = ["Simple Bookmarking", "Speedy Searching", "Easy Sharing"];
 
   return (
-    <div className="feature">
+    <section className="feature">
       <div className="title">
         <h2> Features</h2>
         <p>
@@ -44,7 +44,7 @@ const Feature = () => {
           <button className="blueBtn"> More Info</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
